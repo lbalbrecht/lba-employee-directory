@@ -1,11 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-// import Home from './pages/Home';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Jumbotron from './components/Jumbotron';
 import Wrapper from './components/Wrapper';
 import Container from './components/Container';
-import Searchbar from './components/Searchbar';
-import Table from './components/Table';
+import Body from './components/Body';
 
 function App() {
     return (
@@ -14,8 +12,7 @@ function App() {
                 <Jumbotron />
                 <Wrapper>
                     <Container>
-                        <Searchbar />
-                        <Table />
+                        <Body />
                     </Container>
                 </Wrapper>
             </div>
