@@ -9,17 +9,14 @@ function Searchbar(props) {
                     type="text"
                     value={props.search}
                     onChange={props.handleInputChange}
-                    onSubmit={props.handleFormSubmit}
+                    // onSubmit={props.handleFormSubmit}
                     placeholder="Search"
                     id="employee-search"
                 />
                 <datalist id="employees">{props.employees.map(employee => (
-                    <option value={employee} key={employee} />
+                    <option value={employee} key={employee.id.value} />
                 ))}
                 </datalist>
-                <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
-                    Search
-                </button>
             </div>
         </form>
     )
