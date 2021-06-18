@@ -8,7 +8,7 @@ function Searchbar(props) {
                     className="form-control"
                     type="text"
                     value={props.search}
-                    onChange={props.handleInputChange}
+                    onChange={props.onChange}
                     // onSubmit={props.handleFormSubmit}
                     placeholder="Search"
                     id="employee-search"

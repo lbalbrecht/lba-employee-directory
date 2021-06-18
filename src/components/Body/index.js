@@ -21,13 +21,20 @@ class Body extends Component {
         event.preventDefault()
         console.log('click')
         // take employees from state and search it for target value and set results
-        this.setState({ search: event.target.value })
-        console.log(this.state.search)
-        this.state.employees.results.name.first.filter(event.target.value)
-        console.log(event.target.value)
-        .then(this.setState({ results: event.target.value }))
-        .catch(err => console.log(err))
-        this.setState({ results: this.state.search })
+        const filteredList = this.state.employees.filter(employee => {
+            let matches = Object.values(employee.name.first)
+            .join("")
+            .toLowerCase();
+            return matches.indexOf(event.target.value.toLowerCase()) !== -1;
+        });
+        this.setState({ results: filteredList })
+        // this.setState({ search: event.target.value })
+        // console.log(this.state.search)
+        // // this.state.employees.filter(event.target.value)
+        // console.log(event.target.value)
+        // this.setState({ results: event.target.value })
+        // .catch(err => console.log(err))
+        // this.setState({ results: this.state.search })
     };
 
     // handleFormSubmit = event => {
