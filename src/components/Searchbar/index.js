@@ -9,7 +9,6 @@ function Searchbar(props) {
                     type="text"
                     value={props.search}
                     onChange={props.onChange}
-                    // onSubmit={props.handleFormSubmit}
                     placeholder="Search"
                     id="employee-search"
                 />
